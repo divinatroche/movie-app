@@ -4,7 +4,8 @@ import {NavLink} from 'react-router-dom'
 const Navbar = () => {
   return (
 
-    <nav className="navbar navbar-expand-lg navbar-dark  bg-primary mb-5">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-success mb-5 sticky-top bg-body-tertiary">
+      <div class="container-fluid">
       <span className="navbar-brand">
         Movie App
       </span>
@@ -24,6 +25,11 @@ const Navbar = () => {
             <NavLink className="nav-link" to="/login"> Log In </NavLink>
           </li>
         </ul>
+        <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      </div>
       </div>
     </nav>
   )
