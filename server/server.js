@@ -2,7 +2,8 @@
 const cors = require('cors')
 const express = require('express')
 const app = express()
-const PORT = 8000
+const PORT = process.env.PORT | 8000
+const SECRET = process.env.SECRET_KEY
 require('dotenv').config()
 const cookieParser = require('cookie-parser')
 
